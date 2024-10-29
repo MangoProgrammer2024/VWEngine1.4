@@ -6,7 +6,15 @@
 
 #endif
 
-typedef struct ientity{
+#include "sysincludes.h"
 
+typedef struct ientity{
+  iboolean iSignaled;
+
+  ientity * i;
+
+  enum iEntityMode{ istatic = 0, irigged = 1, iphysics = 2 };
+
+    iconst char * EntityId(ientity * i)iconst;
 
 };
