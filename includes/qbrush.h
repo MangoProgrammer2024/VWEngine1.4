@@ -24,7 +24,7 @@ public:
       void brush_AddToQTable(qbrush * current_qbrush, qbrushtable qtable);
         qboolean CreateBrush(qbrush brush);
 
-        virtual void Brush_DrawToGrid(qbru\]1q]\qw1l;\=-riiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii);
+        virtual void Brush_DrawToGrid(qbrush * current_brush);
 };
 
 typedef struct qbrushtable{
