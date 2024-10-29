@@ -2,7 +2,7 @@
 #pragma once 
 #ifndef MATRIX_H
 #define MATRIX_H
-
+//remove typedef: it caused errors within the class
 template<typename mcase>
 class matrix_m{
  public:
