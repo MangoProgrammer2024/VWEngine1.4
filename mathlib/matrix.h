@@ -4,7 +4,7 @@
 #define MATRIX_H
 
 template<typename mcase>
-typedef class matrix_m{
+class matrix_m{
  public:
   // operator %* translates
   // operator %^ rotates
