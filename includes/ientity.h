@@ -15,7 +15,7 @@ typedef struct ientity{
 
   enum iEntityMode{ istatic = 0, irigged = 1, iphysics = 2 };
 
-    iconst char * EntityId(ientity * i)iconst;
+    const char * EntityId(ientity * i) const;
 
     void EntityAddEpair(ientity * i, const char * ikey, const char * ivalue);
     ientity * Entity_Epair();
