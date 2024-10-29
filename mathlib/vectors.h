@@ -3,10 +3,8 @@
 #ifndef VECTORS_H
 #define VECTORS_H
 
-template<typename vec>class vector
-
+template<typename vec>class vector{
  public:
-
 //vector type t has an float value
 //vec3_t has an array of 3
 //vec4_t has an array of 4
@@ -41,5 +39,7 @@ typedef vec_t vec6_t[6];
   const void vecmatrix(matrix_m * m, vector * v)const;
   //vector dot product
   #define VECTOR_DOT (x, y) (x[0] * y[0] + x[1] * y[1] + x[2] * y[2])
+
+};
 
 #endif
