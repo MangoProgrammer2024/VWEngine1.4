@@ -21,4 +21,5 @@ typedef struct ientity{
     void Entity_AddEpair(ientity * i, const char * ikey, const char * ivalue);
     void Entity_AddToScene(ientity * i, const char * ikey, const char * ivalue);
     ientity * Entity_Epair();
+
 };
