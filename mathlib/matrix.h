@@ -7,6 +7,9 @@ template<typename mcase>
 typedef class matrix_m{
  public:
 
+  // operator %* translates
+  // operator %^ rotates
+  // operator %& scales
   mcase operator %*(matrix_m& m, float translate);
   mcase operator %^(matrix_m& m, float rotation);
   mcase operator %&(matrix_m& m, float scale);
