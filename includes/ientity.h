@@ -17,4 +17,6 @@ typedef struct ientity{
 
     iconst char * EntityId(ientity * i)iconst;
 
+    void EntityAddEpair(ientity * i, const char * ikey, const char * ivalue);
+    ientity * Entity_Epair();
 };
