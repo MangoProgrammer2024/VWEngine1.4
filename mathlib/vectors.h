@@ -13,7 +13,6 @@ typedef float vec_t;
 typedef vec_t vec3_t[3];
 typedef vec_t vec4_t[4];
 typedef vec_t vec6_t[6];
-
  // operator + has float value
  // operator - has unsigned int value
  // operator * has int value
@@ -22,7 +21,6 @@ typedef vec_t vec6_t[6];
  vec operator - (vector, unsigned int vsub);
  vec operator * (vector, int vscalar);
  vec operator % (vector, bool vscale);
-
   //vector functions
   //vector snap is a snap to for a vector
   int vecsnap( int snap, bool snapped )
