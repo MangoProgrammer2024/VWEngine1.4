@@ -4,31 +4,23 @@
 
 #include <string>
 
-class config{
+class config {
 public:
-std::string engine_path;
-std::string estr;
+    std::string engine_path;
+    std::string estr;
 
-  bool loadcontents(config);
+    bool loadcontents(config);
 
-  //string engine config
-  void strconfig(config * str, config& engine-config)
-  {
-    if(str->estr = engine_path)
+    //string engine config
+    void strconfig(config* str, config engine)
     {
-    engine-config.loadcontents(config) = true;
-      if(!str->estr = engine_path)
-     {
-       engine-config.loadcontents(!config) = false;
-     }
-    }    
-  };
+        if (str->estr == engine_path)
+        {
+            engine.loadcontents(engine) == true;
+        }
 
-
-
+    };
 
 };
-
-
 
 #endif
