@@ -4,7 +4,7 @@
 #define QGRID_H
 
 //grid iterator template
-template<typename gridIterator>  template<typename _gb>bool gridBoolean;
+template<typename gridIterator> template<typename _gb>bool gridBoolean;
 gridIterator gridHotkey(QString * F);
 class qgrid{
 public:
