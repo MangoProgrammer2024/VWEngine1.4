@@ -12,7 +12,7 @@ struct qshader{
     //shader image alphaness
     float shaderAlpha;
 //shader
-void shader(shader * s, const char * qShadername, bool set);
+void shader(qshader * s, const char * qShadername, bool set);
 //shader type
 enum{
   normal_shader = 0,
