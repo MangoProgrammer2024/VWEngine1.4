@@ -72,6 +72,10 @@ public:
      virtual void FreeGrid();
      const static void PrintGrid();
 
+      auto enum qGridWorkshop{ qGridStandard = 0, qGridMathmatical = 1, qGridWorkbeam = 2 };
+       const char * qGridText; const void PrintQGridText(qgrid * current, const char * txt);
+       const char * qGridCurrentname(qgrid)const;
+        static char gridBuffer[1024];
 };
 
 #endif
