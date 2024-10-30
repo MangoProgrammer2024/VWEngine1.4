@@ -5,7 +5,7 @@
 
 //grid iterator template
 template<typename gridIterator> template<typename _gb>bool gridBoolean;
-gridIterator gridHotkey(QString * F);
+gridIterator gridHotkey(const char * F);
 class qgrid{
 public:
   //construct the grid
@@ -63,19 +63,32 @@ public:
      void Save_GridDraw(qgrid * grid, qbrush * brush, qentity * entity);
      //determine if grid is saved or not
      bool Saved_Grid();
-
+     //determine if zoom
+     bool Zoom(qgrid zoom);
+      //zoom in 
+      void Zoom_In(double zoom);
+      //zoom out
+      void Zoom_Out(double zoom);
+      //when item is drawn to grid add to viewport
+      void DrawnItem_AddToViewport();
+      //grid change power
+      void Change_GridPower(qgrid * current, float POWER);
      /*-------------------------*/
      //grid miscallaneous commands
-     virtual void Remove();
-     virtual void Add();
-     virtual void LockGrid();
-     virtual void FreeGrid();
-     const static void PrintGrid();
-
+     virtual void Remove();//remove component
+     virtual void Add();//add component
+     virtual void LockGrid();//lock grid
+     virtual void FreeGrid();//free grid
+     const static void PrintGrid()const;//print grid
+      //grid workshop type
       auto enum qGridWorkshop{ qGridStandard = 0, qGridMathmatical = 1, qGridWorkbeam = 2 };
+       //grid marigins text
        const char * qGridText; const void PrintQGridText(qgrid * current, const char * txt);
+       //grid name view
        const char * qGridCurrentname(qgrid)const;
+        //grid static buffer
         static char gridBuffer[1024];
+
 };
 
 #endif
