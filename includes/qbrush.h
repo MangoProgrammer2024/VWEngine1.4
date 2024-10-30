@@ -80,28 +80,28 @@ qbrush * SET_SHADED_PLANES();
 qbrush * FACE_ALLOC();
 qbrush * FACE_FREE();
 qbrush * FACE_CLONE();
-qbrush * FACE_FULL_CLONE();
+qbrush * FACE_FULL_CLONE();//discard
 qbrush * CLAMP();
 qbrush * FACE_MOVE_TEXTURE();
-qbrush * FACE_SET_COLOR();
-qbrush * FACE_TEXTURE_VECTORS();
-qbrush * FACE_MAKE_PLANE();
+qbrush * FACE_SET_COLOR();//discard
+qbrush * FACE_TEXTURE_VECTORS();//discard
+qbrush * FACE_MAKE_PLANE();//discard
 qbrush * EMITED_TEXTURE_COORDINATES();
-qbrush * BRUSH_MAKE_FACE_PLANES();
+qbrush * BRUSH_MAKE_FACE_PLANES();//discard
 qbrush * DRAW_BRUSH_ENTITY_NAME();
-qbrush * BRUSH_MAKE_FACE_WINDING();
-qbrush * BRUSH_SNAP_PLANE_PTS();
+qbrush * BRUSH_MAKE_FACE_WINDING();//discard
+qbrush * BRUSH_SNAP_PLANE_PTS();//discard
 qbrush * BRUSH_SPLIT_BRUSH_BY_FACE();
-qbrush * BRUSH_BEST_SPLIT_FACE();
-qbrush * BRUSH_ONE_SELECT();
-qbrush * BRUSH_ALL_SELECT();
+qbrush * BRUSH_BEST_SPLIT_FACE();//discard
+qbrush * BRUSH_ONE_SELECT();//discard
+qbrush * BRUSH_ALL_SELECT();//discard
 qbrush * BRUSH_CLONE();
-qbrush * BRUSH_FREE_MODE();
-qbrush * BRUSH_RESET_ORIGINAL();
-qbrush * BRUSH_MAKE_CONVEX_BRUSH();
-qbrush * BRUSH_CREATE_SOLID_DRAW();
-qbrush * BRUSH_NON_CREATE_NON_SOLID();
-qbrush * BRUSH_DATA_STORE_AS_FORMAT();
+qbrush * BRUSH_FREE_MODE();//discard
+qbrush * BRUSH_RESET_ORIGINAL();//modified
+qbrush * BRUSH_MAKE_CONVEX_BRUSH();//discard
+qbrush * BRUSH_CREATE_SOLID_DRAW();//discard
+qbrush * BRUSH_NON_CREATE_NON_SOLID();//discard
+qbrush * BRUSH_DATA_STORE_AS_FORMAT();//modified
 
  void Globals(qbrush * variable, int qGVariable);
  void FreeMode(qbrush * free, bool b_free);
@@ -116,13 +116,19 @@ qbrush * BRUSH_DATA_STORE_AS_FORMAT();
  void Brush_FaceClone(qbrush * current, qface * face, qface * copy_face);
  void BrushClamp(qbrush * current, qface * fc, * fs, * ff, bool clamp, float cPoints[]);
  void Brush_FaceMoveTexture(qbrush * current, qface * face, qshader * shader, * face_shader(qface * current));
+ void Brush_EntityName(qbrush * current, qepair * epair);
+ void Brush_SplitByFace(qbrush * current, qface * current_face, int split, int newPoint[]);
+ void BrushClone(qbrush * current, qbrush * clone_brush);
+ void BrushPrevious(qbrush * current, * previous);
+ void Brush_SaveToken(qbrush * current, bool q_gGlobalSavedFile, token * brush_token);
+
 };
 
 typedef struct qbrushtable{
   typedef void QTABLE_DESCRIPTOR;
   int iNumber;
 
-    QTABLE_DESCRIPTOR Save_ItemToTable();
+    QTABLE_DESCRIPTOR Save_ItemToTable(const char * qt_gGlobalTableName);
     QTABLE_DESCRIPTOR Create_TableList(qbrushtable * table, const char * name, int MAX_ITEMS_NUM[]);
 
 };
