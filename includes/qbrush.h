@@ -103,6 +103,19 @@ qbrush * BRUSH_CREATE_SOLID_DRAW();
 qbrush * BRUSH_NON_CREATE_NON_SOLID();
 qbrush * BRUSH_DATA_STORE_AS_FORMAT();
 
+ void Globals(qbrush * variable, int qGVariable);
+ void FreeMode(qbrush * free, bool b_free);
+ void AllocMode(qbrush * alloc);
+ void BrushWinding(qbrush * current_brush, qwinding * winding);
+ void BrushPlanes(qplane * plane, qbrush * current_brush);
+ void BrushVectors(vec_t * v[], qbrush * vbrush);
+ void BrushTexcoords(qbrush * current_brush, float texcoords[]);
+ void Set_BrushShadedPlane(qbrush * current, qplane * plane, float planenums[], bool setShade);
+ void Brush_FaceAlloc(qbrush * current, qface * face, bool alloc);
+ void Brush_FaceFree(qbrush * current, qface * face, bool free_mode);
+ void Brush_FaceClone(qbrush * current, qface * face, qface * copy_face);
+ void BrushClamp(qbrush * current, qface * fc, * fs, * ff, bool clamp, float cPoints[]);
+ void Brush_FaceMoveTexture(qbrush * current, qface * face, qshader * shader, * face_shader(qface * current));
 };
 
 typedef struct qbrushtable{
