@@ -25,6 +25,7 @@ float _y(qshader);
 float _z(qshader);
 //shader image extension
 const char * shaderPNG = "*.png"; const char * shaderJPG = "*.jpeg"; const char * dds = "*.dds";
+
 };
 
 #endif
