@@ -6,6 +6,7 @@
 
 //create menu
 QAction * construct_menu_bar(QWidget * menu, const char * menuname, int menu_items[]);
+//windows menu parent
 QMenu * qWinParent(QWidget * qParent);
   //possible menu items
   const char * fileitem = "File";
