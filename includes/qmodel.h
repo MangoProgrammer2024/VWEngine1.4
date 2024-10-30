@@ -9,7 +9,7 @@ public:
 
     enum{ qstatic_model = 0, qrigged_model = 1, qphysics_model = 2 }modelformat;
     const char * modelextension = "*.gmodel";
-    void ModelExtension();
+    void ModelExtension(const char * modelextension);
 };
 
 #endif
