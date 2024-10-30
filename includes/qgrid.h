@@ -11,9 +11,9 @@ public:
   //construct the grid
   auto ConstructGrid(bool);
   //determine if grid signaled
-  gridBoolean signalGrid();
+  bool signalGrid();
   //grid drag determine
-  gridBoolean dragGrid(qgrid * current);
+  bool dragGrid(qgrid * current);
   /*----------------------------------*/
     //grid variables
     const int q_gRows[];
@@ -50,6 +50,27 @@ public:
       GRID_XY = 1,
       GRID_YZ = 2
     }qGridAxisview;
+    //grids main functions
+    //toggle draw mode
+    bool Draw_ModeOn(qgrid * current);
+    //draw brush to grid
+    void Draw_Brush(qbrush brush, qgrid grid);
+     //show all the brushes that were created
+     void Show_Draw(qgrid, qbrush * current_brushes);
+     //when the grid drags it will disable showing all things displayed on grid for a second
+     bool Grid_Nodraw(qgrid);
+     //save the grids items
+     void Save_GridDraw(qgrid * grid, qbrush * brush, qentity * entity);
+     //determine if grid is saved or not
+     bool Saved_Grid();
+
+     /*-------------------------*/
+     //grid miscallaneous commands
+     virtual void Remove();
+     virtual void Add();
+     virtual void LockGrid();
+     virtual void FreeGrid();
+     const static void PrintGrid();
 
 };
 
