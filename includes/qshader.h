@@ -16,7 +16,8 @@ void shader(shader * s, const char * qShadername, bool set);
 //shader type
 enum{
   normal_shader = 0,
-  transparent_shader = 1
+  transparent_shader = 1,
+  tool_shader = 2
 }shadertype;
 //shader positions
 float _x(qshader);
@@ -24,7 +25,6 @@ float _y(qshader);
 float _z(qshader);
 //shader image extension
 const char * shaderPNG = "*.png"; const char * shaderJPG = "*.jpeg"; const char * dds = "*.dds";
-
 };
 
 #endif
