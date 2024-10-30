@@ -24,7 +24,7 @@ public:
       //brush epair mode
       qbrush * qepair(qbrush * q, const char * key, const char * value);
       //split brush
-      void split_brush(qbrush * q, int addPoints, qboolean qSplitfaces);
+      void split_brush(qbrush * q, int addPoints, qboolean qSplitfaces); 
       //add brush to table
       void brush_AddToQTable(qbrush * current_qbrush, qbrushtable qtable);
         //create brush
