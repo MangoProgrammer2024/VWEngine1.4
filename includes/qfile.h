@@ -5,7 +5,8 @@
 
 typedef struct qfile{
   //file size 
-  std::size_t * qFileSize = qfile * q = (qfile*)malloc(sizeof(qfile));
+  std::size_t * qFileSize;
+  qfile * q = (qfile*)malloc(sizeof(qfile));
   //file name 
   const char * qFilename(qfile * file)const;
     //file contents
