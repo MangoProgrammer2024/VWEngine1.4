@@ -35,11 +35,11 @@ typedef struct qfile{
    //flush
    /*------flushes current file------*/
    template<qf_gGlobalFlush>
-   qf_gGlobalFlush gb_qBoolFlush(qfboolean);
-    void Flush(qfile * qf_current, qfboolean flushable, const char * qFilename)
-   //global file size
-   /*------gets the size of the current global file------*/
-   void qf_gGlobalFileSize(qfile * qfs, qfboolean qf_gGetSize, const char * qFilename, std::size_t * qFileSize);
+    qf_gGlobalFlush gb_qBoolFlush(qfboolean);
+     void Flush(qfile * qf_current, qfboolean flushable, const char * qFilename)
+     //global file size
+     /*------gets the size of the current global file------*/
+     void qf_gGlobalFileSize(qfile * qfs, qfboolean qf_gGetSize, const char * qFilename, std::size_t * qFileSize);
 };
 
 #endif
