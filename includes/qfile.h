@@ -13,8 +13,10 @@ typedef struct qfile{
     /*------file parser is the files text------*/
     void file_parser(qfile * filecontents, const char * filetext);
     //open file
+    /*------opens file with the current name------*/
     void file_open(qfile * file, bool open, const char * qFilename);
     //save file
+    /*------saves file with the current name------*/
     void save_file(qfile& file, bool save, const char * qFilename, static char fileBuffer[1024]);
 };
 
