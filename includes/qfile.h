@@ -34,7 +34,7 @@ typedef struct qfile{
    void create_qfExtension(const char * extension);
    //flush
    /*------flushes current file------*/
-   template<qf_gGlobalFlush>
+   template<typename qf_gGlobalFlush>
     qf_gGlobalFlush gb_qBoolFlush(qfboolean);
      void Flush(qfile * qf_current, qfboolean flushable, const char * qFilename)
      //global file size
