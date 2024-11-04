@@ -30,8 +30,12 @@ struct vwengine_vSurfaceFlags{
  int VolumeSurfaceFlags = 105; 
  int TransverseSurfaceFlags = 106; 
  int TriggerSurfaceFlags = 107; 
- int MantleSurfaceFlaga = 108; int LiquidSurfaceFlags = 109; int LadderSurfaceFlags = 110;
- int PortalSurfaceFlags = 111; int DefaultSurfaceFlags = 112; int CaulkSurface = 113;
+ int MantleSurfaceFlaga = 108;
+ int LiquidSurfaceFlags = 109; 
+ int LadderSurfaceFlags = 110;
+ int PortalSurfaceFlags = 111; 
+ int DefaultSurfaceFlags = 112; 
+ int CaulkSurface = 113;
  int CaulkMiscSurfaceFlags = 114;
 
   bool vSurfaceTransparentFlags(vwengine_vSurfaceFlags * vflags){
