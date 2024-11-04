@@ -1,1 +1,4 @@
+@echo off
+premake-engine vs2022
 
+PAUSE
