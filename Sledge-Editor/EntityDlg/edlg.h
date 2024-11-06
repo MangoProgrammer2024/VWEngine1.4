@@ -25,6 +25,10 @@ public:
     virtual void DlgPreferences(QString * name, EntityDlg dlg, const char * _TITLE, int sz_x, int sz_y);
     unsigned int ed_constructFailed; 
 
+   QButton * Reset; QButton * New;
+
+    const QString text(EntityDlg * button)const;
+
 };
 
 #endif
