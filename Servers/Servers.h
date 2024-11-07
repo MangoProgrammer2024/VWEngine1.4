@@ -18,7 +18,28 @@ typedef std::string CString;
     };
 
      virtual void ServerMsg(Socket socket, ServerCodepost::CString msg);
-     void ConnetPlayer(player_mp_info mp, ServerCodepost::CString node);
+     void ConnetPlayer(player_mp_info&& mp, ServerCodepost::CString node);
+      //socket failed true
+      bool socketfailed(Socket * socket){
+         if(!socket->sockname[0] == NULL){
+          int reroute[1];
+          switch(reroute[1])
+            {
+             case newname:
+              ServerCodepost::CString name[] = "SERVER_DUMMY_REROUTE";
+                 
+              break;
+
+               case newmsg:
+                ServerCodepost::Cstring Msg = "Current Socket Failed! ServerCodepost Generated A New One";
+                 break;
+              }
+
+           return true;
+          
+          }
+       
+      };
 
     
 
