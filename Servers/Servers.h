@@ -2,7 +2,14 @@
 #ifndef SERVERS
 #define SERVERS
 
-struct ServerCodepost{
+namespace ServerCodepost{
+
+ class Socket{
+  public:
+
+ };
+
+
 
 
 
