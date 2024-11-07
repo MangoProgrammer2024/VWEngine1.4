@@ -17,7 +17,9 @@ typedef std::string CString;
       Socket socket = new Socket;
     };
 
+     //server message function
      virtual void ServerMsg(Socket socket, ServerCodepost::CString msg);
+     //connect player node
      void ConnetPlayer(player_mp_info&& mp, ServerCodepost::CString node);
       //socket failed true
       bool socketfailed(Socket * socket){
