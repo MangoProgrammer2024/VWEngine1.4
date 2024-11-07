@@ -5,8 +5,9 @@
 namespace ServerCodepost{
 
  class Socket{
-  public:
-
+  public: 
+   CString socketname[];
+    
  };
 
 
