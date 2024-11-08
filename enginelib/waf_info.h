@@ -1,7 +1,7 @@
 //waf_info.h
 #pragma once 
 #ifndef WAF_INFO_H
-#define WAF_INFO_GH
+#define WAF_INFO_H
 
 namespace info{
 
@@ -31,7 +31,40 @@ int info_flag;
     virtual void info_entity_flags(info * name, int info_flag);
     virtual void info_model_flags(info * name, int info_flag);
 
-  void iterate_info(info * i, std::iterator = i(::_iterator_ptr* i), static char iBuffIterator);
+  const char * BRUSH_MAYJOR; const char * ENTITY_MAYJOR; const char * MODEL_MAYJOR;
+
+  void iterate_info(info * i, std::iterator = i(::_iterator_ptr* i), static char iBuffIterator)
+
+   void Worldspawn(info * entity, info infoNode)
+    {
+      if(entity->classname = worldspawn)
+       {
+         infoNode.iterate_info(entity->classname);
+         info * i = (info*)malloc(std::size_t*node(info));
+          return i;
+
+           //determine worldspawn type
+           int classType = info_flag;
+
+            switch(classType)
+              {
+                case class_brush:
+                  entity->nameinfo = info_brush; infoNode.info_brush_flags(entity->BRUSH_MAYJOR, info_flag = 1);
+                 break;
+
+                case class_actor:
+                  entity->nameinfo = info_entity; infoNode.info_entity_flags(entity->ENTITY_MAYJOR, info_flag = 2);
+                 break;
+
+                case class_model:
+                  entity->nameinfo = info_model; infoNode.info_model_flags(entity->MODEL_MAYJOR, info_flag = 3);
+                 break;
+              } 
+        }       
+    }
+/*******************************************/
+
+  
 
 };  
 
