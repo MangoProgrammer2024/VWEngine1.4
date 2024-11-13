@@ -23,6 +23,15 @@
     ENTITY_FILTER = 2
    };
 
+   struct __g_nbGlobalFilterTable__{
+        void Flush();
+        void Delete();
+        void Add();
+
+       static float g_nbMaxFilterItems[];
+
+   };
+
  };
 
 #endif
