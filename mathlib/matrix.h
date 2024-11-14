@@ -1,38 +1,75 @@
-//matrix.h
-#pragma once 
+// matrix.h
+#pragma once
 #ifndef MATRIX_H
 #define MATRIX_H
-//remove typedef: it caused errors within the class
-template<typename mcase>
-class matrix_m{
- public:
-  // operator %* translates
-  // operator %^ rotates
-  // operator %& scales
-  mcase operator %*(matrix_m& m, float translate);
-  mcase operator %^(matrix_m& m, float rotation);
-  mcase operator %&(matrix_m& m, float scale);
-  //matrix axis
-  float matrix_x[4];
-  float matrix_y[4];
-  float matrix_z[4];
-   //matrix variable
-   typedef float matrix_var;
-   //matrix functions
-    enum{
-     TRANSLATE = 0,
-     ROTATE = 1,
-     SCALE = 2
-    }MatrixMode;
-   //matrix identity
-   virtual void matrix_identity(matrix_m& mId, float axis[4], matrix_m * function);
-   //matrix mode
-   void matrix_mode(matrix_m& m, matrix_m * mode);
-   //matrix axis macros
-   #define MATRIX_X_AXIS 000x000
-   #define MATRIX_Y_AXIS 111x111
-   #define MATRIX_Z_AXIS 222x222
-   
+
+// Matrix template class
+template <typename T>
+class Matrix {
+public:
+    // Operator overloads for matrix transformations
+    Matrix operator*(float translate) const;  // Translate
+    Matrix operator^(float rotation) const;   // Rotate
+    Matrix operator&(float scale) const;      // Scale
+
+    // Matrix axes (4x1 vectors for homogeneous coordinates)
+    float matrix_x[4];
+    float matrix_y[4];
+    float matrix_z[4];
+
+    // Matrix functions
+    enum MatrixMode {
+        TRANSLATE = 0,
+        ROTATE,
+        SCALE
+    };
+
+    // Matrix identity function
+    virtual void matrixIdentity(Matrix& mId, const float axis[4]);
+
+    // Set matrix mode (placeholder for switching modes)
+    void setMatrixMode(MatrixMode mode);
+
+private:
+    T data;  // Template data storage (assumed for simplification)
 };
 
-#endif
+// Implementation of the transformation operators
+template <typename T>
+Matrix<T> Matrix<T>::operator*(float translate) const {
+    Matrix<T> result = *this;  // Placeholder: apply translation
+    // Implement translation logic here
+    return result;
+}
+
+template <typename T>
+Matrix<T> Matrix<T>::operator^(float rotation) const {
+    Matrix<T> result = *this;  // Placeholder: apply rotation
+    // Implement rotation logic here
+    return result;
+}
+
+template <typename T>
+Matrix<T> Matrix<T>::operator&(float scale) const {
+    Matrix<T> result = *this;  // Placeholder: apply scaling
+    // Implement scaling logic here
+    return result;
+}
+
+// Implementation of matrix identity function
+template <typename T>
+void Matrix<T>::matrixIdentity(Matrix& mId, const float axis[4]) {
+    for (int i = 0; i < 4; ++i) {
+        mId.matrix_x[i] = (i == 0) ? 1.0f : 0.0f;
+        mId.matrix_y[i] = (i == 1) ? 1.0f : 0.0f;
+        mId.matrix_z[i] = (i == 2) ? 1.0f : 0.0f;
+    }
+}
+
+// Set the matrix mode
+template <typename T>
+void Matrix<T>::setMatrixMode(MatrixMode mode) {
+    // Placeholder for mode-switching logic
+}
+
+#endif // MATRIX_H
