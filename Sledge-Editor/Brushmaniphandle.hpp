@@ -14,7 +14,7 @@ class BrushModule{
   //handles deleted brush data
   const _BrushHandleModule operator $null(const std::string&& gn_bDeletedBrush, std::size_t * gn_bBrushSize = NULL, std::array<NULL>)const;
   //handles brush bin
-  const _BrushHandleModule operator %g_nbBin(const std::string& g_nbBrushName = g_nbGlobal_Key, std::size_t * g_nbBrushSize = sizeof(brush_t * b), std::array<std::size_t * brush>, const char&&saveFile)const;
+  const _BrushHandleModule operator %g_nbBin(const std::string& g_nbBrushName = g_nbGlobal_Key, std::size_t * g_nbBrushSize = sizeof(brush_t * b), std::array<std::size_t * brush[]>, const char&&saveFile)const;
 };
 
 
