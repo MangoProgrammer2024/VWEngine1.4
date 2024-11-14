@@ -7,7 +7,7 @@
 #include <string.h>
 
 template<typename _BrushHandleModule>
-class BrushModule{
+class g_nbBrushModule{
   public:
   //handle brush size
   _BrushHandleModule operator ++g_nbBrushSize(const std::string& gn_bSelectedBrush, std::size_t * gBrushSize, std::array<BrushSize_Plane[]>) = 0;
