@@ -1,37 +1,41 @@
-/*
- Filters.h 
-*/
-#pragma once 
+// Filters.h
+#pragma once
 #ifndef FILTERS_H
 #define FILTERS_H
 
- struct Filter{
-  int g_nbFilterId;
+#include <string>
 
-  virtual void g_nbAddFilter(const char * gFilterItem);
-  const char * gFilterItem(Filter * filter)const;
+struct Filter {
+    int g_nbFilterId;
 
-    template<typename _Filter>
-     _Filter{
-      const operator f&*(static_cast<_Filter>(Filter))const;
-      operator f^(Filter&) { return Filter };
-     };
+    // Virtual function to be overridden by derived classes if needed
+    virtual void g_nbAddFilter(const std::string& gFilterItem) = 0;
+    
+    // Function to return the filter item, needs implementation
+    virtual const std::string& gFilterItem() const = 0;
 
-   enum g_nbFilterType{
-    TEXTURE_FILTER = 0,
-    BRUSH_FILTER = 1,
-    ENTITY_FILTER = 2
-   };
+    // Enum for filter types
+    enum g_nbFilterType {
+        TEXTURE_FILTER = 0,
+        BRUSH_FILTER,
+        ENTITY_FILTER
+    };
 
-   struct __g_nbGlobalFilterTable__{
+    // Static table for global filter data
+    struct __g_nbGlobalFilterTable__ {
         void Flush();
         void Delete();
         void Add();
 
-       static float g_nbMaxFilterItems[];
+        // Static array with some size; defining a size or initializer is necessary
+        static constexpr int maxItems = 100;
+        static float g_nbMaxFilterItems[maxItems];
+        static std::size_t * g_nbFilterItemSize[maxItems];
+    };
+};
 
-   };
+// Initialize static member
+float Filter::__g_nbGlobalFilterTable__::g_nbMaxFilterItems[__g_nbGlobalFilterTable__::maxItems] = {};
 
- };
+#endif // FILTERS_H
 
-#endif
