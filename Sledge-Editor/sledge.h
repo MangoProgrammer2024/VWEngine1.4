@@ -7,7 +7,7 @@
 
  namespace __sledge_exe__{
 
-   int __sledge__ = 0;
+   int __sledge__entry__id__ = 0;
 
     const char * texture_browser_directory = "C:\\" const;
     const char * game_directory = "C:\\" const;
