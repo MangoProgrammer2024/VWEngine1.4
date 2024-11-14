@@ -10,6 +10,23 @@ template<typename _BrushHandleModule>
 class g_nbBrushModule{
   public:
 
+  int gn_bIObserver;
+  int g_nbISeriousObserver[];
+
+   virtual void return_Observer(g_nbBrushModule * iobserver){
+    if(iobserver->gn_bIObserver)
+    {
+      std::size_t * iSize = iobserver->gn_bIObserver;
+      return iSize;
+    }
+
+    if(iobserver->g_nbISeriousObserver)
+    {
+      std::size_t * iSize = iobserver->g_nbISeriousObserver;
+      return iSize;
+    }
+   };
+
   using malloc = g_nbmalloc;
 
   const virtual void _HandleModule_Failed(g_nbBrushModule ** g_nbModule){
