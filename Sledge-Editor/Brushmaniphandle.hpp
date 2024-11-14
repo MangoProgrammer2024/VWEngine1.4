@@ -10,6 +10,18 @@ template<typename _BrushHandleModule>
 class g_nbBrushModule{
   public:
 
+  using malloc = g_nbmalloc;
+
+  const virtual void _HandleModule_Failed(g_nbBrushModule ** g_nbModule){
+    if(!g_nbBrushModule&&g_nbModule)
+    {
+      g_nbBrushModule * module_f = (g_nbBrushModule*)g_nbmalloc(sizeof(g_nbBrushModule));
+      return module_f;
+      
+        return false;
+    }
+  }const;
+
   _BrushHandleModule operator ++g_nbBrushSize(const std::string& gn_bSelectedBrush, std::size_t * gBrushSize, std::array<BrushSize_Plane[]>) = 0;
   const _BrushHandleModule operator $null(const std::string&& gn_bDeletedBrush, std::size_t * gn_bBrushSize = NULL, std::array<NULL>)const;
   const _BrushHandleModule operator %g_nbBin(const std::string& g_nbBrushName = g_nbGlobal_Key, std::size_t * g_nbBrushSize = sizeof(brush_t * b), std::array<std::size_t * brush[]>, const char&&saveFile)const;
