@@ -15,7 +15,7 @@
 
     const char * __editor_entity_contextmenu_deffile__ = "WaF.def" const;
 
-    void Def_Entity_Directory(__sledge_exe__ ** g_nbGlobalFind){
+    const void Def_Entity_Directory(__sledge_exe__ ** g_nbGlobalFind){
         if(!g_nbGlobalFind->smtools_directory == NULL)
          {
           sledge_message.printMessage = "Cant load STools.dll ERROR: 00011x1x1111";
@@ -35,7 +35,7 @@
           return NULL;
         }
      
-    };
+    }const;
 
      class g_nbGlobalTextureFilters;
 
