@@ -1,1 +1,8 @@
+#include <system.h>
 
+int main(){
+
+_system("run.bat");
+return 0;
+
+};
