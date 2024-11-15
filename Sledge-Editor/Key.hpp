@@ -23,7 +23,7 @@ const void iterate_key_Type(key * Key, entity * ent){
   }
   if(Key->_KeyId[0] = target)
   {
-    ent->findent.linkParse_kv(const std::string * Key, const std::string * Key);
+    ent->findent.linkParse_kv(const std::string * Key, const std::string * Key = "targetname");
     return true;
   }
 
