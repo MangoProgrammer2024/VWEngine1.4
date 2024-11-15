@@ -15,8 +15,9 @@ int _KeyId[];//match int enum
 const void iterate_key_Type(key * Key, entity * ent){ enum keyType } const = 0;
 
  const void game_targetkey(void) const = 0; const void game_targetent(void) const = 0; 
- const static void game_script_colorgroup() const = 0; const void game_entorigin(key K, std::array<float _x[], float _y[], float _z[]>) const = 0;
+ const static void game_script_colorgroup() const = 0; const void game_entorigin(key&& K, std::array<float _x[], float _y[], float _z[]>) const = 0;
 
+ static bool g_nbMemfileprintfKey_Save(Key * key);
 
 };
 
