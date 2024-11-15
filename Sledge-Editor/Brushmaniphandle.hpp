@@ -5,7 +5,7 @@
 
 #include <math.h>
 #include <string.h>
-
+//file may need modification soon
 template<typename _BrushHandleModule>
 class g_nbBrushModule{
   public:
