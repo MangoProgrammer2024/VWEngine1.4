@@ -6,6 +6,9 @@
 #include <math.h>
 #include <string.h>
 //file may need modification soon
+
+module brushObservor;
+
 template<typename _BrushHandleModule>
 class g_nbBrushModule{
   public:
