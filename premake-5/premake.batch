@@ -6,7 +6,7 @@ echo Built %Vstype_Directory%
 
  echo ENGINE INFO: 1.4 ModuleObservor Version%Vstype_Directory%
  echo ************************************
- echo *MODULE OBERVOR LINKED SUCCESSFULLY*
+ echo *MODULE OBSERVOR LINKED SUCCESSFULLY*
  echo ************************************
 
 set ReprintfTypeVsEngineLinkerPremadesys /p = "VWEngine1.4.vcxproj";
