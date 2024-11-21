@@ -14,7 +14,8 @@
 
 #define BRUSH_MAYJOR "Brush" 000
 
-const std::string& BrushType;
+typedef const char STR_CONST;
+const std::string& BrushType = nullptr;
 
 //brush preferences aka brush type
 Brush&& brushPreferences(SledgePreferencesModule&& preferences, PreferencesWnd&& moduleLoad) {
@@ -60,4 +61,40 @@ Brush* returnSize() {
 		if( BrushSize ){ Brush std::array<PrimitSize, BrushSize>Brush; return BrushSize; };
 
 		return b;
+};
+//brush face sides
+const enum brushFaceside { bFrontface = 0, bBackface, bLeftface, bRightface, bTopface, bBottomface }const;
+//brush projection modes
+static void global_brushProjection(Brush * brush_owner) {
+	enum { brushWireframe = 0, brushDetailed, brushDisableShader}brushProjectionmode; 
+	 const Brush* bProjection = brush_owner;
+};
+//brush free id
+Brush* brushFreeid(Brush * brushmode) {
+	if (brushmode->Free) {for (int i = 0; i >= 0; i++) { Brush* brushflag; brushflag->g_nbNumberId = 1; return brushflag; }
+	brushmode->brushmodule.brushSelected(false);
+		return brushmode;
+	}
+};
+//brush lock id
+Brush* brushLockid(Brush * brushmode) {
+	if (brushmode->Locked) { for (int i = 0; i >= 0; i++) { Brush* brushflag; brushflag->g_nbNumberId = 2; return brushflag; }
+	brushmode->brushmodule.brushSelected(brushmode) == true;
+		while (brushmode->brushmodule.brushSelected(brushmode) == true)
+		{
+			//allocate selected brush
+			Brush* brush = (Brush*)malloc(sizeof(Brush));
+				return brush;
+		}
+	return brushmode;
+	}
+};
+//brush string const
+Brush* brushStrFlags() {
+	std::FILE* brushSTRsys; 
+	STR_CONST("classname" "geometry");
+		if (brushStrFlags){
+			fprintf(brushSTRsys, "STR_CONST"); 
+		}
+		std::FILE* brushfile = (FILE*)malloc(sizeof(FILE));
 };
