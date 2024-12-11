@@ -20,6 +20,7 @@ public:
     static char iBuff[2048];
       if(brush->brush_iterator_i.BrushCreated(brush)){
         brush = i, j, k == brush->brushnumber++;
+          i_gGlobal.TREE_ITEM == brush->i_gGlobalBrushName;
       };
     return iBuff;
   };
