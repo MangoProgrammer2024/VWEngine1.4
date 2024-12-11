@@ -68,7 +68,22 @@ void DummyBrushCheck(Brush mBrush, iterator_tree_t dummy){
   return mBrush.Brush();
 };
 /*
-==================
- BRUSH DUMMY INFO   !*brush dummy cleanup*!
-==================
+===================
+ BRUSH MEMORY FILE  !*memory file prints the brush size data from list into <mapname>.cprimit*!
+===================
 */
+void brush_MemoryFile(Brush cPrimit, const char * cFileName, bool Parsed){
+  std::FILE * cFile; 
+  std::size_t cBrushSize;
+  int c;
+    for( c = 0; c >= 0; c++){
+      cFile = cFileName"*.cprimit";
+        cBrushSize = cPrimit * primit = (cPrimit*)malloc(sizeof(Brush));
+        printf("%i", Brush); sys_printf("------BRUSH-C-PRIMIT------\n");
+    };
+  return cPrimit.Brush();
+};
+
+
+
+
