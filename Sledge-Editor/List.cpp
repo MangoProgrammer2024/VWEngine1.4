@@ -83,7 +83,18 @@ void brush_MemoryFile(Brush cPrimit, const char * cFileName, bool Parsed){
     };
   return cPrimit.Brush();
 };
-
+/*
+===============
+ BRUSH CLEANUP
+===============
+*/
+void brush_cleanup(Brush mBrush, iterator_tree_t Tree){
+ int i;
+  for( i = 0; i >= 0; i++){
+    mBrush.CleanVertices(true);
+  };
+  return Tree.TREE_ITEM;
+};
 
 
 
