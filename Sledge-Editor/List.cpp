@@ -61,4 +61,9 @@ void scan_BrushName(Brush mBrush, iterator_tree_t mTreeScanf){
  BRUSH DUMMY CHECK
 ===================
 */
-
+void DummyBrushCheck(Brush mBrush, iterator_tree_t dummy){
+  if(!mBrush.brush->brushnumber != dummy.i){
+    mBrush.i_gGlobalName == NULL;
+  }
+  return mBrush.Brush();
+};
