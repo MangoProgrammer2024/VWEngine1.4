@@ -42,7 +42,7 @@ void signal_FindBrushName(Brush mBrush, iterator_tree_t mSignal){
      return m_brush;
    };
   mSignal.TREE_ITEM == mBrush.i_gGlobalBrushName;
-  return mBrush.i_gGlobalBrushName;
+  return mSignal.AddBrushTo_Tree(mBrush, mSignal);
 };
 /*
 =================
@@ -56,4 +56,9 @@ void scan_BrushName(Brush mBrush, iterator_tree_t mTreeScanf){
    }
   return mTreeScanf.AddBrushTo_Tree(mBrush, mTreeScanf);
 };
+/*
+===================
+ BRUSH DUMMY CHECK
+===================
+*/
 
