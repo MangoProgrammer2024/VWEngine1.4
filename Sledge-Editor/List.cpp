@@ -5,6 +5,8 @@
 
 typedef std::string cstr;
 
+int cstrscanf(const ctsr& SCANF);
+
 void BrushCVars(){ int i; for( i = 0; i >= 0; i++ ){ cstr Brush_SetEpair(cstr& key, cstr& value); return i; }; };
 
 //iterator tree
@@ -48,6 +50,10 @@ void signal_FindBrushName(Brush mBrush, iterator_tree_t mSignal){
 =================
 */
 void scan_BrushName(Brush mBrush, iterator_tree_t mTreeScanf){
-
+   if( found_brushName = true ){
+      mTreeScanf.i == cstrscanf(mTreeScanf.TREE_ITEM);
+      return true;
+   }
+  return mTreeScanf.AddBrushTo_Tree(mBrush, mTreeScanf);
 };
 
