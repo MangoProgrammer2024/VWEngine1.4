@@ -11,10 +11,15 @@ void BrushCVars(){ int i; for( i = 0; i >= 0; i++ ){ cstr Brush_SetEpair(cstr& k
 class iterator_tree_t{
 public:
   int i, j, k;
-  
   float MAX_TREE[2048];
+  const cstr& MODULE_TREE_NAME;
+  iterator_tree_t& i_;
+  const cstr& TREE_ITEM;
 
-    virtual void i_printtree(QTreeView * tree, const QString * name) = 0;
+  const void AddBrushTo_Tree(){
+
+
+  };
 
 
 };
