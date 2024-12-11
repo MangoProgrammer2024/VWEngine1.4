@@ -24,7 +24,7 @@ public:
  */
   const void AddBrushTo_Tree( Brush * brush, iterator_tree_t i_gGlobal ){
     static char iBuff[2048];
-      if(brush->brush_iterator_i.BrushCreated(brush)){
+      if( brush->brush_iterator_i.BrushCreated( brush ) ){
         brush = i, j, k == brush->brushnumber++; i_gGlobal.TREE_ITEM == brush->i_gGlobalBrushName;};
     return iBuff;
   };
@@ -62,7 +62,7 @@ void scan_BrushName(Brush mBrush, iterator_tree_t mTreeScanf){
 ===================
 */
 void DummyBrushCheck(Brush mBrush, iterator_tree_t dummy){
-  if(!mBrush.brush->brushnumber != dummy.i){
+  if( !mBrush.brush->brushnumber != dummy.i ){
     mBrush.i_gGlobalName == NULL;
   }
   return mBrush.Brush();
