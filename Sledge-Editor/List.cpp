@@ -67,3 +67,8 @@ void DummyBrushCheck(Brush mBrush, iterator_tree_t dummy){
   }
   return mBrush.Brush();
 };
+/*
+==================
+ BRUSH DUMMY INFO   !*brush dummy cleanup*!
+==================
+*/
