@@ -51,7 +51,7 @@ BrushVertex* BrushVerts(const Brush * cubiod, const Vector<BrushVertex>&& vertex
 };
 //brush face size failed
 void brushSizefailed(Brush* brush) {
-	if (!(brush_faceSize == 0)) { brush_faceSize != faceSize; };
+	if (!(brush_faceSize == NULL)) { brush_faceSize != faceSize; };
 	return;
 };
 //return brush size
