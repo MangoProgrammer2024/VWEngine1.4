@@ -16,9 +16,12 @@ public:
   iterator_tree_t& i_;
   const cstr& TREE_ITEM;
 
-  const void AddBrushTo_Tree(){
-
-
+  const void AddBrushTo_Tree( Brush * brush, iterator_tree_t i_gGlobal ){
+    static char iBuff[2048];
+      if(brush->brush_iterator_i.BrushCreated(brush)){
+        brush = i, j, k == brush->brushnumber++;
+      };
+    return iBuff;
   };
 
 
