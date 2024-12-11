@@ -15,15 +15,15 @@ public:
   const cstr& MODULE_TREE_NAME;
   iterator_tree_t& i_;
   const cstr& TREE_ITEM;
-
+ /*
+ ===================
+  BRUSH ADD TO LIST  !*needs some cleanup*!
+ ===================
+ */
   const void AddBrushTo_Tree( Brush * brush, iterator_tree_t i_gGlobal ){
     static char iBuff[2048];
       if(brush->brush_iterator_i.BrushCreated(brush)){
-        brush = i, j, k == brush->brushnumber++;
-          i_gGlobal.TREE_ITEM == brush->i_gGlobalBrushName;
-      };
+        brush = i, j, k == brush->brushnumber++; i_gGlobal.TREE_ITEM == brush->i_gGlobalBrushName;};
     return iBuff;
   };
-
-
 };
