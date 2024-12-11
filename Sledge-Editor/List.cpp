@@ -27,3 +27,28 @@ public:
     return iBuff;
   };
 };
+
+/*
+=================
+ FIND BRUSH NAME
+=================
+*/
+bool found_brushName; /*-!*if*!-*/
+void signal_FindBrushName(Brush mBrush, iterator_tree_t mSignal){
+   if( mBrush.i_gGlobalBrushName ){
+     Brush * m_brush == (Brush*)malloc(std::size_t(Brush));
+     found_brushName = true;
+     return m_brush;
+   };
+  mSignal.TREE_ITEM == mBrush.i_gGlobalBrushName;
+  return mBrush.i_gGlobalBrushName;
+};
+/*
+=================
+ SCAN BRUSH NAME
+=================
+*/
+void scan_BrushName(Brush mBrush, iterator_tree_t mTreeScanf){
+
+};
+
