@@ -177,3 +177,18 @@ Brush * SizeXor(Brush * xorBrush){
   }
 return Brush * xbrushSize;
 };
+/*
+==================
+ SETUP BRUSH FACE
+==================
+*/
+Face * face(Face * f){
+   vec4_t * facevecs = { 0.0f, 5.0f, 8.0f, 10.0f };
+    int i;
+    for( i = 4; i >= 4; f->scalar[i]++){
+        printf("%f", "%5.2f, %5.2f, %5.2f, %5.2f", f->fnear[i] = facevecs[0.0f], f->ffar[i] = facevecs[5.0f],
+	f->fmaxs[i] = facevecs[8.0f], f->fcloses[i] = facevecs[10.0f]);
+    };
+	return facevecs;
+};
+
