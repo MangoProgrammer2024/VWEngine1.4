@@ -176,6 +176,4 @@ Brush * SizeXor(Brush * xorBrush){
     xorBrush->brushSize++;
   }
 return Brush * xbrushSize;
-};	
-
-
+};
