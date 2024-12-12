@@ -89,12 +89,3 @@ Brush* brushLockid(Brush * brushmode) {
 	return brushmode;
 	}
 };
-//brush string const
-Brush* brushStrFlags() {
-	std::FILE* brushSTRsys; 
-	STR_CONST("classname" "geometry");
-		if (brushStrFlags){
-			fprintf(brushSTRsys, "STR_CONST"); 
-		}
-		std::FILE* brushfile = (FILE*)malloc(sizeof(FILE));
-};
