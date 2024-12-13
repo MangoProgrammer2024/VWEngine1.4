@@ -191,4 +191,12 @@ Face * face(Face * f){
     };
 	return facevecs;
 };
-
+/*
+=============
+ MALLOC FACE
+=============
+*/
+Face * MallocFace(){
+ Face * face = (Face*)malloc(sizeof(Face));
+ return face;
+};
